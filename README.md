@@ -4,7 +4,7 @@ My Resume in Latex | For the love of LaTeX
 
 ---
 
-***How to run ?
+* How to run ?
 
 ```pdflatex -shell-escape -interaction=nonstopmode my_resume.tex```
 
