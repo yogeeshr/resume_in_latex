@@ -1,0 +1,171 @@
+%-------------------------
+% Resume in Latex
+% Author    : Yogeesh Rajendra
+% Website   : https://github.com/yogeeshr/resume_in_latex
+% License   :  GPL-3.0 license
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Yogeesh Rajendra} & Email : \href{mailto:yogeesh.srkvs@gmail.com}{yogeesh.srkvs@gmail.com}\\
+   & Mobile : +1-206-482-7330 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Sri Jayachamarajendra College of Engineering}{Mysuru, KA, INDIA}
+      {Bachelor of Engineering in Computer Science;  CGPA: 9.21 Out of 10 }{Sep. 2009 -- Jun. 2013}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Amazon}{Seattle, WA}
+      {Software Development Engineer}{Oct 2016 - Present}
+      \resumeItemListStart
+        \resumeItem{Openbox}
+          {Designed and implemented \href{https://www.amazon.in/gp/help/customer/display.html/ref=dp_openbox_read_more_desktop_en_in?ie=UTF8&pop-up=1&nodeId=GNHMSYW5BTFBTMEW}{this feature} for Indian customer to avoid fraud and decrease operating cost for the company where customer orders a product and same is delivered by opening the box at customer door step. Impact : Million dollars of money saved, customer trust gained, featured the widget in detail page, 1000+ TPS, $<$10ms latency with many glance views on the same. Involved working with multiple teams like detailpage, ordering, shipping etc. and influence them.}
+        \resumeItem{EasyCare}
+          {Implemented a feature called \href{https://www.amazon.in/amazontrusted}{Amazon trusted} - certain product in our category is tested and Amazon puts a seal of trusted on that. This help company get close to customer and earn their trust. Impact : $>$500 glance views per minute , proved increase in revenue. Involved understating the search framework and iconfarm framework with Search / Detail-page teams respectively.}
+        \resumeItem{Audit Workflow}
+          {Architected , designed and implemented critical path code for system to send catalog samples for audit to 35 membered auditing team. This helped us get the sampled dataset for establishing baseline for our reconciliation system which helped us move the quality bar over period of time. With this trained data set, ML model was generated this helped us generate baseline metric at catalog scale. Impact : Involved understanding various auditing techniques, how scientist generates model, how auditors audit the given data and interaction with multiple teams to understand right fit solutions. Technologies involved are : AWS StepFunctions, EMR, Mturk, Sagemaker, Lambda, SNS, SQS, UI Framework.}
+        \resumeItem{Global Item Processing}
+          {Designed the Architecture and implemented multiple systems in multi phased / multi year catalog re-architecture program which is critical in addressing some availability issue in catalog processing. Implemented critical features in stitching final catalog data as part of create / update and delete catalog phases of project and ported same from old arch to new. Also, implemented diff framework , back-fills at catalog scale to ensure smooth port of storage and compute from old to new. Impact : system with very high TPS and less latency implemented / shadowed and launched successfully - catalog processing is much optimized and optimal now.}
+         \resumeItem{Alexa Monitoring}
+          {To be filled}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {InMobi}{Bangalore, KA, INDIA}
+      {Senior Software Engineer}{Nov 2015 - Oct 2017}
+      \resumeItemListStart
+        \resumeItem{Merchant Product Catalog Processor}
+          {Designed and developed system which consume merchant catalog.This keeps the ads system ready with product details that can be served in real time as part of ads. This work invovled onboarding framework for merchant catalog and optimizing ingestion time for same. 40 Merchants , 10+ million products a day , 10X improvement in ingestion times, 2 hours of SDE time saved per merchant catalog onboarding. Technologies involved spring bot , elasticsearch , JDBC.}
+        \resumeItem{Overlap / Potential Analysis}
+          {Business needed a way to understand if these user segments provided by customers to show ads help in getting us any revenue. I designed and implemented a hive based solution to take these segments and run query to join with our user ids served so far to understand potential. Exposed a UI to upload these segments, query picks up file and send insight to business. Decreased the overall time taken to get insight from 4 days $\rightarrow$ 2 hours (Every week we got 20 such segments from business).}
+        \resumeItem{Audience Segment Creator}
+          {Customers gives user segment to show ads. Engineer picks this file runs job and uploads to user profiles. This process was very slow + there was no feedback loop to business for the same on success/fail. Built a tool where business uploads user segment and gave them insight about success / fail for user segment creation. Impact : 2-3 days $\rightarrow$ 3 hours for creating user segments with clear messaging about success/fail at userid level. Involved working with multiple teams to allow ingress points for segment creation.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {SuccessFactors , an SAP Company}{Bangalore, KA, INDIA}
+      {Software Developer}{Jul 2013 - Nov 2015}
+      \resumeItemListStart
+        \resumeItem{Upgrade Center + Permission Resolver}
+          {Designed and developed a product called upgrade center, a system where admin can enable a feature in our product for their company. Initial design was to allow admin to upgrade if any of the permissions combination exist ( eg. "Admin + Comp HR" can upgrade, just having Admin or Comp HR permission would allow upgrade). I built a permission resolver component using binary expression tree with ANTLR library allows upgrade only with exact permission combination exists with admin user. This delighted customer as they could have more control on exactly who all can grant permission. Same solution was accepted and praised by principal engineer.}
+        \resumeItem{Web Accessibility}
+          {I was the main lead to make systems web accessible. Mandatory requirement from federal on our product for differently-abled ones to work. Involved learning new tools : JAWS , Section 508 , Screen readers , HTML patterns to make accessible. Impact : Whole website was made web accessible.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Cisco}{Bangalore, KA, INDIA}
+      {College Intern- 2 Months Summer Internship}{Jun 2012 - Aug 2012}
+      \resumeItemListStart
+        \resumeItem{SIP XML Ladder Generator}
+          {Tool built in Service Routers group to analyze voice calls with \href{https://en.wikipedia.org/wiki/Session_Initiation_Protocol}{SIP protocol}. Engineers used to grep and write scripts to figure out protocol's connection issue. The ladder generator tool parsed the networking packets and gave \href{https://www.tutorialspoint.com/session_initiation_protocol/session_initiation_protocol_basic_call_flow.htm}{nice visualization} showing the issue in SIP protocol connection flow ( 100 Trying , 180 Ringing , 200 OK etc. codes ). Impact : 1000+ cases resolved, saved 40 SDE hours per month.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------Achievements-----------------
+\section{Achievements}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Amazon Bar Raiser}
+      {Taken multiple interviewers ( 300+ ) and Bar raised many interviews inside Amazon.}
+    \resumeSubItem{Amazon Security Certifier}
+      {I have certified many Amazon applications to meet the security bar.}
+    \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: Java, SQL, Shell Scripting}
+     \hfill
+     \textbf{Technologies}{: AWS [ EMR , SFN , Lambda etc. ], Linux}
+   }
+ \resumeSubHeadingListEnd
+
+\section{}
+    \flushright
+        \hfill {Document Powered By {\large{\textbf{\LaTeX}}}}
+    \flushleft
+    
+%-------------------------------------------
+\end{document}
